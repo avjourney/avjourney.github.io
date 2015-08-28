@@ -29,6 +29,8 @@
     
     <script src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="assets/js/sweet-alert.js"></script>
+	<link href="assets/css/sweet-alert.css" rel="stylesheet" >
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -432,20 +434,17 @@
 					</form>
 					
 					<form method="POST" action="http://formspree.io/john@avjourney.com">
-<!-- 					<form id="submit" onsubmit="validateForm(event)" enctype="multipart/form-data" method="post"> -->
 					<div class="row">
 						<!-- Name -->
 		        			<div class="form-group col-md-6">
 		            			<label for="name" class="sr-only"></label>
 		            			<input type="name" name="name" style="text-align: center" class="form-control input-group-lg reg_name" placeholder="* NAME"/>
-<!-- 		            				<input id="name" style="text-align: center" class="form-control input-group-lg reg_name" type="text" name="name" title="Enter first name" placeholder="* NAME"/> -->
 		        			</div>
 
 		        			<!-- Email Address -->
 		        			<div class="form-group col-md-6">
 		            			<label for="email" class="sr-only"></label>
 		            			<input type="email" name="_replyto" style="text-align: center" class="form-control input-group-lg reg_name" placeholder="* EMAIL"/>
-<!-- 		            				<input id="email" style="text-align: center" class="form-control input-group-lg reg_name" type="text" name="email" title="Enter email address" placeholder="* EMAIL"/> -->
 		        			</div>
 		    			</div>
 		    			<div class="row">
@@ -453,7 +452,6 @@
 		        			<div class="form-group col-md-12">
 		            			<label for="text" class="sr-only"></label>
 		            			<textarea name="message" rows="10" cols="10"class="form-control input-group-lg reg_name" placeholder="* YOUR MESSAGE"/></textarea>
-<!-- 		            				<textarea id="text" class="form-control input-group-lg reg_name" type="text" name="text" title="Enter your message here." rows="10" cols="10" placeholder="* YOUR MESSAGE"/></textarea> -->
 		        			</div>
 		    			</div>
 		    				
@@ -461,7 +459,7 @@
 		    				<div class="col-xl-4">
 			    				<input type="text" name="_gotcha" style="display:none">
 			    				<input type="hidden" name="_subject" value="Journey Church Contact Form" />
-			    				<input type="hidden" name="_next" value="showThanksAlert()">
+			    				<input type="hidden" name="_next" value="validateForm(event)">
 							<input id="submit" type="submit" name="submit" value="SEND" class="btn btn-warning btn-lg sweet-3">
 						</div>
 					</div>
@@ -504,8 +502,10 @@
     <script type="text/javascript" src="assets/js/smoothscroll.js"></script>
 	<script type="text/javascript" src="assets/js/jquery-func.js"></script>
 	<script type="text/javascript">
-		function showThanksAlert() {
-			swal("Good job!", "You clicked the button!", "success");
+		function validateForm(event) {
+			event.preventDefault();
+			
+			swal("Thanks!", "We will respond as soon as possible.", "success");
 		}
 	</script>
   </body>
