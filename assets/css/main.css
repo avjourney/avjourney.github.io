@@ -276,7 +276,8 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../img/header_bg.jpg) no-repeat center top;
+/* 	background: url(../img/header_bg.jpg) no-repeat center top; */
+	background: #fff;
 	margin-top: -50px;
 	padding-top:40px;
 	text-align:center;
