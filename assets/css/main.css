@@ -283,7 +283,6 @@ a:after {
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 610px;
 	width: 100%;
 	
     -webkit-background-size: 100%;
@@ -633,6 +632,14 @@ a:after {
 }
 
 @media screen and (max-width:769px) {
+	#headerwrap {
+		background: #fff;
+		padding-top:100px;
+		text-align:center;
+		background-attachment: relative;
+		background-position: center center;
+		width: 100%;
+	}
 	#headerwrap h1 {
 		font-size: 80px;
 	}
@@ -642,6 +649,12 @@ a:after {
 	}
 	#modal-desc {
 		display: none;
+	}
+	h2 {
+		padding-left:10px;
+	}
+	.smoothScroll {
+		padding-bottom:15px;
 	}
 }
 
